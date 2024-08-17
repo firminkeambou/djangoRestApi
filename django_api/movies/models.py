@@ -8,4 +8,9 @@ class Moviedata(models.Model):
     name = models.CharField(max_length=200)
     duration =  models.FloatField()
     rating = models.FloatField()
+    # the below field is added especially to build up a filter for the Api
+    typ = models.CharField(max_length=200,default='action')
+
+    image = models.ImageField(default='Images/None/Noimg.jpg',
+                              upload_to='Images')
     
